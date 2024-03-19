@@ -27,9 +27,16 @@
     border: 1px solid rgb(236, 164, 69);
 }
 
-.skill--item:hover {
+.skill--item--dark .skill--item:hover {
     box-shadow: 0 0 3px 1px rgb(236, 164, 69);
-    background-color: rgb(51, 50, 49);
+    background-color: rgba(51, 50, 49, 0.116);
+    /* color: rgb(254, 110, 110); */
+    transform: scale(1.05);
+}
+
+.skill--item--light .skill--item:hover {
+    box-shadow: 0 0 3px 1px rgb(236, 164, 69);
+    background-color: rgb(216, 216, 216);
     /* color: rgb(254, 110, 110); */
     transform: scale(1.05);
 }

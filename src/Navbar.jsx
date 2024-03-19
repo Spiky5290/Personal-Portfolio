@@ -8,6 +8,54 @@ import {
 import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [emoji, setEmoji] = useState("😄");
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
+
+  const emojis = [
+    "🍕",
+    "🍔",
+    "🍟",
+    "🍰",
+    "🌼",
+    "🌻",
+    "🌹",
+    "🍓",
+    "🌞",
+    "🌈",
+    "🌟",
+    "⛅",
+    "🌎",
+    "🪐",
+    "🚀",
+    "🥂",
+    "🍉",
+    "🌺",
+    "🍁",
+    "🧿",
+    "⏳",
+    "🦊",
+    "🧑‍💻",
+    "💀",
+    "👽",
+    "👾",
+    "👀",
+    "🐣",
+    "🦢",
+    "🦚",
+    "🦋",
+    "🦕",
+    "🐸",
+  ];
+
+  function toggleEmojis() {
+    const randomEmoji = Math.floor(Math.random() * emojis.length);
+    setEmoji(emojis[randomEmoji]);
+  }
+
   const [mailIcon, setMailIcon] = useState(faEnvelope);
   const [mailState, setMailState] = useState(false);
   const changeMail = () => {
@@ -45,10 +93,15 @@ const Navbar = () => {
                 class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a>Homepage</a>
-                </li>
-                <li>
-                  <a>Contact</a>
+                  <Link
+                    className="links"
+                    to="to_hero"
+                    smooth={true}
+                    offset={-120}
+                    duration={800}
+                  >
+                    <a>Home Page</a>
+                  </Link>
                 </li>
                 <li>
                   <Link
@@ -72,17 +125,36 @@ const Navbar = () => {
                     <a>Skills</a>
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    className="links"
+                    to="to_contact"
+                    smooth={true}
+                    offset={-120}
+                    duration={800}
+                  >
+                    <a>Contact</a>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
-          <div className="flex-center">
-            <a className="btn btn-ghost text-xl">Portfolio</a>
+          <div className="flex-center" onClick={toggleEmojis}>
+            <a className="btn btn-ghost text-xl">Portfolio {emoji}</a>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-8 text-lg">
             <li>
-              <a>Home</a>
+              <Link
+                className="links"
+                to="to_hero"
+                smooth={true}
+                offset={-120}
+                duration={800}
+              >
+                <a>Home</a>
+              </Link>
             </li>
             <li>
               <Link

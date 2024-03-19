@@ -4,7 +4,7 @@ import "./fonts.css";
 const MyProjects = () => {
   return (
     <div className="my-10">
-      <div className="ubuntu-bold text-6xl pl-8">MyProjects</div>
+      <div className="flex ubuntu-bold text-6xl md:pl-8 md:m-5 justify-center md:justify-start">My Projects</div>
       <div className="my-24 mx-10">
         <div class="card w-full bg-base-200 shadow-xl justify-center">
           <div class="card-body items-center">

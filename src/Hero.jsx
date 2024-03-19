@@ -21,9 +21,9 @@ const Hero = () => {
 
 
   return (
-    <div className="p-5">
+    <div className="p-5" name="to_hero">
       <div
-        className="hero min-h-screen rounded-[25px]"
+        className="hero md:min-h-[60vh] rounded-[25px]"
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1707343844152-6d33a0bb32c3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
             <div class="avatar">
-              <div class="w-24 mask mask-squircle mb-14">
+              <div class="w-24 mask mask-squircle mb-5 md:m-7">
                 <img src={avatar} alt="Avatar" />
               </div>
             </div>

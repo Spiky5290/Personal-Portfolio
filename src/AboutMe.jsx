@@ -5,10 +5,10 @@ import "./App.css";
 const AboutMe = () => {
   return (
     <div className="mb-20" id="about_me">
-      <div className="flex pl-8 m-5 ubuntu-bold">
+      <div className="flex md:pl-8 md:m-5 ubuntu-bold justify-center md:justify-start">
           <h1 className="mb-5 text-6xl u">About Me</h1>
       </div>
-      <div className=" ml-32 ubuntu-light">
+      <div className="ml-2 flex ubuntu-light md:ml-20 lg:ml-32">
         <p className="about--info text-lg">
           <ul className="space-y-2">
             <li>

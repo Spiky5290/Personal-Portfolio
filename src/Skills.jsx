@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Skills.css";
 import "./fonts.css";
 import {
@@ -27,11 +27,11 @@ import LeetCode from "./LeetCode";
 function Skills() {
   return (
     <div id="skills">
-      <div className="pl-8  m-5">
-        <h1 className="text-6xl ubuntu-bold">Skills and Technologies</h1>
+      <div className="flex justify-center md:pl-8 md:m-5 md:justify-start">
+        <h1 className="text-6xl ubuntu-bold">Skills<p className="hidden md:block">and Technologies</p></h1>
       </div>
       <div>
-        <div className="skill--card justify-center">
+        <div className="skill--card justify-center skill--item--dark">
           <div className="skill--item">
             <SiHtml5 size="5rem" />
             <p>HTML</p>
@@ -102,7 +102,7 @@ function Skills() {
           </div>
         </div>
         <div className="flex w-full justify-center mb-10">
-          <div className="w-fit pl-10 pr-10 pb-10 bg-white dark:dark:bg-slate-900 rounded-xl">
+          <div className="hidden lg:block w-fit pl-10 pr-10 pb-10 bg-white dark:dark:bg-slate-900 rounded-xl" data-theme="dark">
             <Github />
           </div>
         </div>
