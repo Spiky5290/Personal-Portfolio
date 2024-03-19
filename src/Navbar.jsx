@@ -139,7 +139,7 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <div className="flex-center" onClick={toggleEmojis}>
+          <div className="flex justify-center" onClick={toggleEmojis}>
             <a className="btn btn-ghost text-xl">Portfolio {emoji}</a>
           </div>
         </div>
